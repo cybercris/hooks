@@ -2,13 +2,13 @@ import React from 'react';
 import { Switch, Route } from 'react-router-dom';
 
 // import Home from './pages/Home';
-import UseState from './pages/Hooks/UseState';
+import Hooks from './pages/Hooks';
 
 export default function Routes() {
   return (
     <Switch>
       {/* <Route path="/" exact component={Home} /> */}
-      <Route path="/usestate" component={UseState} />
+      <Route path="/hooks" component={Hooks} />
     </Switch>
   );
 }
