@@ -1,7 +1,7 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## About
-Rocketseat's module 07 about redux
+Rocketseat's module 08 about hooks
 
 ## Librarys used
 *   react-redux
