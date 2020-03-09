@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useMemo } from 'react';
 
 export default function UseState() {
   const [tech, setTech] = useState([]);
@@ -21,6 +21,9 @@ export default function UseState() {
     localStorage.setItem('tech', JSON.stringify(tech));
   }, [tech]);
 
+  // usar quando só precisa mostrar o valor referente a uma variável que muda, ao invés de ficar chamando toda hora que o return for instanciado
+  const techSize = useMemo(() => tech.length, [tech]);
+
   return (
     <>
       <ul>
@@ -28,6 +31,8 @@ export default function UseState() {
           <li key={t}>{t}</li>
         ))}
       </ul>
+      <strong>Você tem {techSize} tecnologias</strong>
+      <br />
       <input
         type="text"
         name=""
